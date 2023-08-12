@@ -1,16 +1,9 @@
 import requests
 import json
 import os
+import time
 from energinet import Energinet
-
-FETCH_DAYS = "10"
-NORLYS_ENDPOINT = f"https://norlys.dk/api/flexel/getall?days={FETCH_DAYS}&sector=DK1&isBusiness=false"
-
-
-def get_norlys_price_info():
-    req = requests.get(NORLYS_ENDPOINT)
-    json_data = json.loads(req.text)
-    return json_data
+from norlys import Norlys
 
 
 if __name__ == "__main__":
