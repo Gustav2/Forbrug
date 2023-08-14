@@ -8,7 +8,7 @@ from norlys import Norlys
 if __name__ == "__main__":
     energinet = Energinet(os.environ["ENERGINET_TOKEN"])
     norlys = Norlys()
-    date = datetime.datetime(2023, 8, 7)
+    date = datetime.datetime(2023, 8, 3)
 
     energinet_usage = energinet.get_usage_from_date(date)
     norlys_prices = norlys.get_data_from_date(date, add_fees=True)
